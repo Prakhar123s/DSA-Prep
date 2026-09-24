@@ -1,0 +1,29 @@
+Example 1:
+Input: n = 4
+
+Output: ["****","***","**","*"]
+
+Example 2:
+Input: n = 3
+
+Output: ["***","**","*"]
+
+
+class Solution {
+    public List<String> invertedTriangle(int n) {
+        
+        List<String> lst=new ArrayList<>();
+
+
+        for(int i=n;i>0;i--){
+        String str="";
+
+            for(int j=i;j>0;j--){
+                
+                str=str+"*"; 
+            }
+            lst.add(str);
+        }
+        return lst;
+    }
+}
