@@ -1,0 +1,36 @@
+Example 1:
+Input: n = 4
+
+Output: ["****","*  *","*  *","****"]
+
+Example 2:
+Input: n = 3
+
+Output: ["***","* *","***"]
+
+
+class Solution {
+    public List<String> hollowSquare(int n) {
+        
+
+        List<String> lst=new ArrayList<>();
+        for(int i=0;i<n;i++){
+        String str="";
+
+            for(int j=0;j<n;j++){
+
+                if (i == 0 || i == n - 1 || j == 0 || j == n - 1) {          
+
+                    str=str+"*";
+                  }
+                  else{
+                    str=str+" ";
+                  }
+           
+        }
+        lst.add(str);
+    }
+        return lst;
+
+    }
+}
