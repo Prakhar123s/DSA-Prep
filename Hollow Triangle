@@ -1,0 +1,32 @@
+Example 1:
+Input: n = 5
+
+Output: ["*","**","* *","*  *","*****"]
+
+Example 2:
+Input: n = 4
+
+Output: ["*","**","* *","****"]
+
+
+class Solution {
+    public List<String> hollowTriangle(int n) {
+        
+        List<String> lst=new ArrayList<>();
+
+        for(int row=1;row<=n;row++) {
+            String str = "";
+            for (int col = 0; col < row; col++) {
+
+                if (col == 0 || row == n || col == row-1) {
+                    str = str + "*";
+                } else {
+                    str = str + " ";
+                }
+            }
+            lst.add(str);
+        }
+
+        return lst;
+    }
+}
