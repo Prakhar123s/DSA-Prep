@@ -1,0 +1,33 @@
+Example 1:
+Input: n = 3
+
+Output: ["1","121","12321"]
+
+Example 2:
+Input: n = 5
+
+Output: ["1","121","12321","1234321","123454321"]
+
+
+
+
+class Solution {
+    public List<String> mirrorNumberPattern(int n) {
+        
+
+         List<String> lst = new ArrayList<>();
+
+        for (int i = 1; i <= n; i++) {
+
+            String str="";
+            for (int j = 1; j <= i; j++) {
+                str = str + j;
+            }
+            for (int k = i - 1; k > 0; k--) {
+                str = str + k;
+            }
+            lst.add(str);
+        }
+        return lst;
+    }
+}
